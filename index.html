@@ -29,6 +29,13 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #f9fafb;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
         }
 
         /* HEADER */
@@ -81,30 +88,44 @@
             color: #ff8c42;
         }
 
-        /* SEARCH CONTAINER - RIDOTTO DI 1/3 */
+        /* SEARCH CONTAINER - LARGHEZZA 100% */
         .search-header {
             background: white;
-            padding: 12px 40px;
+            padding: 12px 0;
             border-bottom: 1px solid #e0e0e0;
+            width: 100%;
         }
 
         .search-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0 40px;
         }
 
         .search-container {
-            max-width: 500px;
+            max-width: 100%;
+            width: 100%;
             position: relative;
         }
 
-        /* Google CSE Custom Styling - RIDOTTO DI 1/3 */
+        /* Google CSE Custom Styling - LARGHEZZA 100% E CENTRATO */
         .gcse-searchbox-only {
             background: transparent !important;
+            width: 100% !important;
         }
 
         .gsc-search-box {
             margin: 0 !important;
+            width: 100% !important;
+        }
+
+        .gsc-search-box-tools {
+            width: 100% !important;
+        }
+
+        .gsc-search-box table {
+            width: 100% !important;
         }
 
         .gsc-input-box {
@@ -112,14 +133,44 @@
             border: 1px solid #ddd !important;
             border-radius: 8px !important;
             height: 32px !important;
+            width: 100% !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+
+        .gsc-input input {
+            background: transparent !important;
+            color: #333 !important;
+            padding: 0 15px !important;
+            font-size: 14px !important;
+            height: 32px !important;
+            line-height: 32px !important;
+            vertical-align: middle !important;
+            width: 100% !important;
         }
 
         .gsc-input {
-            background: transparent !important;
-            color: #333 !important;
-            padding: 6px 15px !important;
-            font-size: 14px !important;
+            display: flex !important;
+            align-items: center !important;
             height: 32px !important;
+            width: 100% !important;
+        }
+
+        table.gsc-input {
+            height: 32px !important;
+            width: 100% !important;
+        }
+
+        .gsc-input td {
+            vertical-align: middle !important;
+        }
+
+        .gsib_a {
+            width: 100% !important;
+        }
+
+        .gsib_b {
+            width: 100% !important;
         }
 
         .gsc-search-button {
@@ -146,16 +197,30 @@
             height: 14px !important;
         }
 
-        /* RESULTS STYLING - RIDOTTI DI 1/3 */
+        /* RESULTS STYLING - LARGHEZZA 100% */
         .results-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
             padding: 20px 40px;
         }
 
         .gsc-results-wrapper-overlay,
         .gsc-results-wrapper-visible {
             background: transparent !important;
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .gsc-resultsbox-visible {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .gsc-webResult,
+        .gsc-results {
+            width: 100% !important;
+            max-width: 100% !important;
         }
 
         .gsc-result {
@@ -165,6 +230,7 @@
             padding: 12px 15px !important;
             margin-bottom: 12px !important;
             transition: all 0.3s !important;
+            width: 100% !important;
         }
 
         .gsc-result:hover {
@@ -208,6 +274,10 @@
 
         .gs-per-result-labels {
             display: none !important;
+        }
+
+        .gsc-above-wrapper-area {
+            width: 100% !important;
         }
 
         /* PAGINATION */
@@ -283,6 +353,10 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
             .header-content {
                 flex-direction: column;
                 gap: 15px;
@@ -294,7 +368,7 @@
                 justify-content: center;
             }
 
-            .search-header,
+            .search-wrapper,
             .results-container {
                 padding: 20px;
             }
